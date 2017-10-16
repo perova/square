@@ -1,23 +1,24 @@
 
 // variables
-$pink:  #FFAAB7;
-$dark-pink: #CD679A; 
-$green: green;
-$dark-green: #4C7373;
-$border-radius: 6px;
+$blue: #60c4b0;
+
+
 
 body{
-	background-color: $pink;
+	background-color: $blue;
 	color: white;
 }
 
 
-// partials 
-//@import "header";
 
 
 
 // nesting
+h1 {
+	text-align: center;
+	padding: 20px;
+	
+}
 .content {
 	.row {
 		
@@ -27,61 +28,11 @@ body{
 	width:100%;
 	background-color:white;
 	}
-}
-
-#square {
-	width: 100px;
-	height: 100px;
-	background: red;
-}
-
-
-// loops
-$bannerCount: 4;
-@for $i from 1 through $bannerCount {
-  .banner-#{$i} {
-  	padding: 10px;
-	background-color: lighten($green, 10% * $i);
-	color: darken(white, 20% * $i);
-	margin: 5px;
-	border-radius: $border-radius;	
-	text-align: center;
-  }
-}
-
-#real {
-	color: $dark-green;
-}
-
-// mixins
-@mixin border-radius($radius) {
-	border-radius: $radius;
-	--webkit-border-radius: $radius;
-	-moz-border-radius:$radius;
-}
-
-@mixin link() {
-	text-decoration: none;
-	color: white;
-}
-
-.link {
-	margin-top: 5px;
-	display: block;
-	background-color: $dark-pink;
-	color: white;
-	text-decoration: none;
-	text-align: center;
-	padding: 15px;
-	@include border-radius($border-radius);
-	&:hover {
-		@include link();
-		background-color: darken($dark-pink, 10%); //making things darker or 
-	}
-	&:selected {
-		@include link();
-	}
-	&:visited {
-		@include link();
+	input {
+	margin-top:15px;
+	margin-bottom:15px;
 	}
 }
+
+
+
